@@ -1,0 +1,122 @@
+<!-- ESP8266 Web Server
+    by Neama Kazemi
+    https://github.com/neamax
+    https://www.luckygene.net
+    Initially done during college summer of 2022
+    Polished and published 2025
+    No copyright, no license, no warranty ;) -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NeaESP8266 Web Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+    <div id="loginBox">
+        <div class="credits">
+            <h1>NeaESP8266 Web Server Login</h1>
+            <h3 style="font-weight: bold;">Developed for fun by Neama Kazemi</h3>
+            <h3 style="font-weight: bold; margin-bottom: 20px;">(Github/neamax)</h3>
+            <h4 style="font-style: italic;">LuckyGene Indie Studios</h4>
+            <h4 style="font-style: italic; margin-bottom: 20px;">
+                <a href="https://www.luckygene.net" target="_blank"
+                    style="color: inherit; text-decoration: none;">https://www.luckygene.net</a>
+            </h4>
+        </div>
+        <hr>
+        <div class="login-input">
+            <p style="margin-bottom: 10px;">Enter password to login</p>
+            <div>
+                <input type="password" id="pw">
+                <button onclick="checkLogin()">Login</button>
+            </div>
+        </div>
+        <h5>version 0.0.1</h5>
+    </div>
+
+    <div id="controlBox" style="display:none;">
+        <div class="control-box">
+            <div class="control-container">
+                <h2>NeaESP8266 Web Server Dashboard</h2>
+                <p style="font-weight: bold;">Developed for fun by Neama Kazemi (Github/<a
+                        href="https://www.github.com/neamax" target="_blank"
+                        style="color: inherit; text-decoration: none;">neamax</a>)</p>
+                <h4 style="font-style: italic; margin-bottom: 5px;">
+                    <a href="https://www.luckygene.net" target="_blank"
+                        style="color: inherit; text-decoration: none;">LuckyGene Indie Studios</a>
+                </h4>
+                <p>version 0.0.1</p>
+            </div>
+            <hr>
+            <div class="control-container">
+                <h3>Display Module</h3>
+                <div>
+                    <input type="text" id="lcdText" placeholder="Text to display">
+                    <button onclick="updateLCD()">Show Text</button>
+                </div>
+                <button onclick="displayIdleState()">Show Idle State</button>
+            </div>
+            <hr>
+            <div class="control-container">
+                <h3>System Control</h3>
+                <p>Sensor voltage: <span id="sensor">--</span> V </p>
+                <p>LED is currently: <span id="ledState">unknown</span></p>
+                <div>
+                    <button onclick="toggleLED('on')">LED ON</button>
+                    <button onclick="toggleLED('off')">LED OFF</button>
+                </div>
+                <button onclick="showSignal()">Show WiFi Signal</button>
+            </div>
+            <hr>
+            <div class="control-container">
+                <h3>Modules Statistics</h3>
+                <div class="info-panels">
+                    <div class="info-panel-container">
+                        <h4>ESP8266</h4>
+                        <hr>
+                        <div class="info-panel">
+                            <p>Chip ID: <span id="chipID">--</span></p>
+                            <p>Core Ver: <span id="coreVer">--</span></p>
+                            <p>SDK Ver: <span id="sdkVer">--</span></p>
+                            <p>Flash Real: <span id="flashReal">--</span> KB</p>
+                            <p>Heap: <span id="heap">--</span> B</p>
+                            <p>Max Free Block: <span id="maxFreeBlock">--</span> B</p>
+                            <p>Uptime: <span id="uptime">--</span> s</p>
+                        </div>
+                    </div>
+                    <div class="info-panel-container">
+                        <h4>WiFi</h4>
+                        <hr>
+                        <div class="info-panel">
+                            <p>SSID: <span id="ssid">--</span></p>
+                            <p>RSSI: <span id="rssi">--</span> dBm</p>
+                            <p>IP: <span id="ip">--</span></p>
+                            <p>MAC: <span id="mac">--</span></p>
+                            <p>BSSID: <span id="bssid">--</span></p>
+                            <p>Channel: <span id="channel">--</span></p>
+                            <p>Hostname: <span id="hostname">--</span></p>
+                        </div>
+                    </div>
+                    <div class="info-panel-container">
+                        <h4>OLED</h4>
+                        <hr>
+                        <div class="info-panel">
+                            <p>Size: <span id="size">--</span></p>
+                            <p>Rotation: <span id="rotation">--</span></p>
+                            <p>Addr: <span id="addr">--</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+body {
+    font-family: monospace;
+    text-align: center;
+    margin-top: 10px;
+    background-color: var(--bg);
+    color: var(--fg);
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    font-weight: bold;
+}
+
+hr {
+    margin-block-start: 0;
+    width: 100%;
+    color: #b89edf;
+    border: solid 1px;
+    opacity: 0.25;
+}
+
+input {
+    height: 25px;
+    border: solid 1px #4f4f4f;
+    border-radius: 10px;
+    color: rgb(172, 172, 172);
+    background: #222222;
+    padding-left: 5px;
+}
+
+button {
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    min-width: 100px;
+    max-width: 200px;
+    align-self: center;
+    text-decoration: underline;
+    background: transparent;
+    color: #dddddd;
+    border: solid 1px #a5a5a5;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+#loginBox {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3vh;
+    background: #080016;
+    border: solid 2px #666666;
+    border-radius: 15px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dark {
+    --bg: #121212;
+    --fg: #eee;
+}
+
+.control-box {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    min-height: 90vh;
+    align-items: center;
+    background: #080016;
+    border: solid 2px #666666;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.control-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+    margin: 1vw 0;
+}
+
+#ledState {
+    font-weight: bold;
+}
+
+.info-panels {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.info-panel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: solid 2px #b89edf30;
+    background: #202020;
+    border-radius: 15px;
+    margin: 5px 10px;
+}
+
+.info-panel-container h4 {
+    align-self: center;
+}
+
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 10px 15px 10px;
+}
